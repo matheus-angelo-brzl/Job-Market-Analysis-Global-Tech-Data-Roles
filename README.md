@@ -1,201 +1,201 @@
-# Job-Market-Analysis-Global-Tech-Data-Roles
-This project analyzes real-world job postings data to extract insights about the global job market, with a focus on salary distribution, seniority levels, work models, locations, and in-demand skills.  The goal is to demonstrate data analysis, data cleaning, and exploratory data analysis (EDA) skills using Python and Pandas.
-Data Overview
+# Global Job Market Analysis – Tech & Data Roles
 
-Total job postings analyzed: 83
+An end-to-end job market analysis project that collects, processes, and analyzes global tech and data job postings, extracting insights about locations, salaries, seniority levels, work models, and in-demand skills.
 
-Source: Public job board API
+This project demonstrates practical skills in Python, data analysis, data cleaning, and exploratory analysis using real-world job market data.
 
-Data format: JSON
+---
 
-Scope: Global positions (remote, hybrid, and on-site)
+## Project Overview
 
- Technologies Used
+The objective of this project is to analyze the global tech and data job market and answer questions such as:
 
-Python
+- Where are tech and data roles most concentrated worldwide?
+- What is the salary distribution across the market?
+- How does compensation vary by seniority level?
+- How do different work models impact salary?
+- Which skills are most in demand?
 
-Pandas
+The project follows a realistic data workflow:
 
-Matplotlib
+- Data collection from a public job API  
+- Data filtering and normalization  
+- Data analysis using Pandas  
+- Statistical summaries and aggregations  
+- Data visualization with Matplotlib  
+- Exportable insights for further analysis  
 
-JSON
+---
 
-Pathlib
+## Project Structure
+The project is organized as follows:
+- `data/raw/`: Raw job data collected from the API  
+- `plots/`: Generated charts and visualizations  
+- `collect_jobs.py`: Job data ingestion and filtering  
+- `analyze_jobs.py`: Data analysis and insights generation  
 
-***Key Analyses & Insights***
 
-  
- ***Top Job Locations***
- 
-Location	Job Count
+---
 
-Worldwide	15
+## Technologies and Libraries
 
-North America	11
+- Python 3
+- Pandas
+- Matplotlib
+- JSON
+- Pathlib
 
-Paris	7
+---
 
-New York	5
+## Key Analyses and Results
 
-London	4
+### Dataset Summary
 
-Madrid	4
+- Total jobs analyzed: **83**
 
-Europe	3
+---
 
-Málaga	3
+### Top 10 Job Locations
 
-San Francisco	3
+| Location        | Job Count |
+|-----------------|-----------|
+| Worldwide       | 15 |
+| North America   | 11 |
+| Paris           | 7 |
+| New York        | 5 |
+| London          | 4 |
+| Madrid          | 4 |
+| Europe          | 3 |
+| Málaga          | 3 |
+| San Francisco   | 3 |
+| Tel Aviv        | 3 |
 
-Tel Aviv	3
+---
 
- Insight:
-Remote-friendly or globally scoped roles (“Worldwide”, “Europe”) represent a significant portion of job openings, reinforcing the growing trend of distributed teams.
+### Salary Distribution (USD per year)
 
- ***Salary Distribution (USD / year)***
+| Metric | Value |
+|------|------|
+| Mean | 149,639 |
+| Median | 135,000 |
+| Minimum | 41,500 |
+| Maximum | 332,500 |
+| 75th Percentile | 200,375 |
 
-Based on 18 postings with available salary ranges:
+---
 
-Metric	Value
+### Seniority Level Distribution
 
-Mean	$149,639
+| Seniority | Job Count |
+|----------|-----------|
+| Senior | 36 |
+| Mid | 25 |
+| Lead | 7 |
+| Entry Level | 4 |
+| Junior | 2 |
+| Manager | 2 |
+| Staff | 2 |
+| Intern | 2 |
+| Director | 1 |
+| VP | 1 |
+| Principal | 1 |
 
-Median	$135,000
+---
 
-Min	$41,500
+### Average Salary by Seniority
 
-Max	$332,500
+| Seniority | Average Salary (USD/year) |
+|---------|---------------------------|
+| VP | 332,500 |
+| Staff | 212,000 |
+| Lead | 140,125 |
+| Senior | 137,900 |
+| Mid | 135,417 |
+| Entry Level | 86,500 |
 
-75th Percentile	$200,375
+---
 
- Insight:
-The salary distribution shows high variance, indicating a market with strong differentiation based on seniority, specialization, and possibly company size.
+### Most In-Demand Skills
 
-  ***Seniority Level Distribution***
-  
- Seniority	Job Count
- 
-Senior	36
+| Skill | Job Count |
+|------|-----------|
+| Python | 21 |
+| SQL | 17 |
+| APIs | 13 |
+| AI | 12 |
+| Dashboards | 9 |
+| FX | 8 |
+| RPA | 7 |
+| BI Tools | 7 |
+| ERP | 7 |
+| Process Mining | 6 |
 
-Mid	25
+---
 
-Lead	7
+## Visualizations
 
-Entry level	4
+The project generates visualizations such as average salary by work model using Matplotlib, allowing comparison between remote, hybrid, and on-site roles.
 
-Junior	2
+---
 
-Manager	2
+## How to Run the Project
 
-Staff	2
+### Clone the repository
+git clone https://github.com/matheus-angelo-brzl/Job-Market-Analysis-Global-Tech-Data-Roles.git
+cd Job-Market-Analysis-Global-Tech-Data-Roles
 
-Intern	2
+Create and activate a virtual environment (recommended)
+python -m venv .venv
+.venv\Scripts\activate
 
-Director	1
+Install dependencies
+pip install -r requirements.txt
 
-VP	1
-
-Principal	1
-
- Insight:
-The market is clearly senior-heavy, suggesting high demand for experienced professionals and a more competitive environment for entry-level candidates.
-
-  ***Average Salary by Seniority***
-  
- Seniority	Avg Salary (USD/year)
- 
-VP	$332,500
-
-Staff	$212,000
-
-Lead	$140,125
-
-Senior	$137,900
-
-Mid	$135,417
-
-Entry level	$86,500
-
- Insight:
-Salary growth accelerates significantly after senior levels, with executive and staff roles commanding a strong premium.
-
-  ***Most In-Demand Skills***
-  
- Skill	Job Count
- 
-Python	21
-
-SQL	17
-
-APIs	13
-
-AI	12
-
-Dashboards 9
-
-FX	8
-
-RPA	7
-
-BI Tools	7
-
-ERP	7
-
-Process Mining	6
-
- Insight:
-The data highlights Python and SQL as core skills, while AI, automation, and business intelligence tools are increasingly relevant across roles.
-
- ***Project Structure***
-project/
-
-├── collect_jobs.py        # Job data collection
-
-├── analyze_jobs.py        # Data analysis and visualization
-
-├── data/
-
-│   ├── raw/               # Raw JSON data
-
-│   └── salary_by_seniority.csv
-
-├── plots/
-
-│   └── salary_by_work_model.png
-
-└── README.md
-
-***How to Run the Project***
-pip install pandas matplotlib
+Collect job data
 python collect_jobs.py
+
+Run the analysis
 python analyze_jobs.py
 
-***What This Project Demonstrates***
+Portfolio Value
 
-Data ingestion and preprocessing
+This project demonstrates:
 
-Exploratory data analysis (EDA)
+Real-world API data ingestion
 
-Aggregations and group-based statistics
+Data cleaning and normalization
 
-Real-world salary analysis
+Exploratory data analysis
 
-Clean, modular, and readable Python code
+Statistical reasoning
+
+Modular and readable Python code
+
+Business-oriented insights
+
+It is well suited for roles such as:
+
+Data Analyst
+
+Business Intelligence Analyst
+
+Junior Data Scientist
+
+Analytics Engineer
 
 Future Improvements
 
-Increase dataset size for stronger statistical significance
+Time-series analysis of job postings
 
-Add confidence intervals for salary analysis
+Salary comparison by country or region
 
-Time-based analysis (salary trends over time)
+Currency normalization
 
-Advanced skill clustering and correlation analysis
+Interactive dashboards (Streamlit, Power BI, or Tableau)
 
-Interactive dashboards (e.g., Plotly / Streamlit)
+Automated data collection and scheduling
 
- ***Author***
+Author
 
 Matheus Angelo
-Aspiring Data Analyst / Statistician
-Focused on data-driven insights and real-world problem solving
+GitHub: https://github.com/matheus-angelo-brzl
